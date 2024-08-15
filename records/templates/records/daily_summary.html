@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Summary</title>
+</head>
+<body>
+    <h1>Daily Summary of Consultations</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Patient</th>
+                <th>Room Number</th>
+                <th>Consultation Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for consultation in consultations %}
+            <tr>
+                <td>{{ consultation.doctor.name }}</td>
+                <td>{{ consultation.patient.name }}</td>
+                <td>{{ consultation.room_number }}</td>
+                <td>{{ consultation.consultation_time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
